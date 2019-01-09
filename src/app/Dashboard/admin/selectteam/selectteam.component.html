@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row sm-6">
+        <div class="card w-50 mt-2 ">
+            <div class="card-header">Select Teams</div>
+            <div class="card-body">
+                <div ng-controller="MyCtrl">
+                </div>
+                <div class="table-responsive">
+                        <table class="table table-hover" id="table">
+                            <thead>
+                                <tr>
+                                  <th scope="col">Team1 Players</th>
+                                  <th scope="col">Profession</th>
+                                  <th scope="col"></th>
+                                </tr>
+                                <tr>
+                                    <td scope="row"><input  type="" class="form-control mb-3"   placeholder="Enter name of Team 1"id="name1" name="name1"  #name1></td>
+                                    <td><input  type="" class="form-control mt-0" placeholder="Enter Profession of player"id="professional1" name="professional1"  #professional1 ></td>
+                                    <td><button type="button" class="btn btn-primary btn-sm" (click)="onAddPlayer1Click()">Add Player</button></td>
+                                  </tr>
+                                  
+                              </thead>
+                              <tbody>
+                               
+                                <tr *ngFor="let team1 of playername">
+                                  <td >{{ team1.name1 }}</td>
+                                  <td >{{ team1.professional1 }}</td>
+                                 
+                                </tr>
+                                <tr>
+                                <td>
+                                    <button class="float-right btn btn-info" type="button" (click)="onFirstFinalTeam()">Final Playing 11</button></td>
+                                    <td>
+                                         <button type="button" class="btn btn-primary" >Ready To Play</button>
+                                     </td>
+                                
+                            </tr>
+                              
+                            </tbody>
+
+                        </table>
+                      </div>
+                
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="row sm-6"> -->
+                <div class="card w-50 mt-2  ">
+                    <div class="card-header">Select Teams</div>
+                    <div class="card-body">
+                        <div ng-controller="MyCtrl">
+                        </div>
+                        <div class="table-responsive">
+                                <table class="table table-hover" id="table">
+                                    <thead>
+                                        <tr>
+                                          <th scope="col">Team2 Players</th>
+                                          <th scope="col">Profession</th>
+                                          <th scope="col"></th>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="form-control mt-0"  placeholder="Enter name of Team 2"  id="name2" name="name2" #name2 ></td>
+                                            <td><input  type="" class="form-control mt-0 "   placeholder="Enter Profession of player"id="Profession2" name="Profession2" #professional2 ></td>
+                                            <td><button type="button" class="btn btn-primary btn-sm" (click)="onAddPlayer2Click()">Add Player</button></td>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                       
+                                        <tr *ngFor="let team2 of playername2">
+                                          <td >{{ team2.name2 }}</td>
+                                          <td >{{ team2.professional2 }}</td>
+                                        </tr>
+                                        <tr><td><button class="float-right btn btn-info" type="button" (click)="onSecondtFinalTeam()">Final Playing 11</button></td>
+                                            <td>
+                                                    <button type="button" class="btn btn-primary" (click)="onReadyToPlayClick()">Ready To Play</button>
+                                                </td>
+                                            </tr>
+                                      </tbody>
+                                </table>
+                              </div>
+                       
+                    <!-- </div>
+                </div> -->
+        <router-outlet></router-outlet>
+

@@ -1,0 +1,108 @@
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto ">
+        <div class="card card-signin my-5 jumbotron">
+          <div class="card-body"> -->
+              <div class="container">
+                  <div class="col">   
+              <div class="card w-50 mt-2 ">
+                <div class="card-header">Match Started</div>
+                <div class="card-body">
+            <h3 class="card-title text-center">Live Score</h3>
+            <form class="form-signin">
+                <div class="form-label-group my-2 "  *ngIf="showNewBowler">
+                    <label for="">Select New Bowler</label>
+                    <select class="hideLabel form-control col-md-8 ml-5 " >
+                      <option selected="">Player Name</option>
+                      <option>
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-label-group my-2 ">
+                    <label >Ball</label>
+                    <div>
+                    <input type="text" class="col-md-8 mx-auto" [value]="ballnum" [disabled]="txtBall" #ball>
+                      </div>    
+                  </div>
+              <div class="form-label-group ">
+                <label> Runs To Per Ball</label>
+                <select class="hideLabel form-control col-md-8 mx-auto" (change)="onSelectOfPossibility()" #possiblerun>
+                  <option selected="">Select Run/Wicket</option>
+                  <option>
+                    1
+                  </option>
+                  <option>
+                    2
+                  </option>
+                  <option>
+                    3
+                  </option>
+                  <option>
+                    4
+                  </option>
+                  <option>
+                    6
+                  </option>
+                  <option>
+                    Wicket
+                  </option>
+                </select>
+              </div>
+              <div class="form-label-group my-2 " *ngIf="showType">
+                <label for="">Wicket</label>
+                <select class="hideLabel form-control col-md-8 mx-auto" #wickettype [disabled]="btnDisable" (change)="onSelectOfWicket()">
+                  <option selected="">Select Wicket</option>
+                  <option>
+                    Catch
+                  </option>
+                  <option>
+                    Bold
+                  </option>
+                  <option>
+                    Runout
+                  </option>
+                  <option>
+                    Stumping
+                  </option>
+                  <option>
+                    Hitwicket
+                  </option>
+                </select>
+              </div>
+              <div class="form-label-group my-2 " *ngIf="showCatchBy">
+                <label for="">Catch By</label>
+                <select class="hideLabel form-control col-md-8 mx-auto" [disabled]="btnCatchByDisable">
+                  <option selected="">Player Name</option>
+                  <option>
+  
+                  </option>
+  
+                </select>
+              </div>
+  
+  
+             
+  
+              <div class="form-label-group my-2 " >
+                <label for="">Total Number Of Overs</label>
+                <div>
+                <input type="text" class="col-md-8 mx-auto"  [value]="numofovers" [disabled]="txtOver" #over> 
+                  </div>
+                
+              </div>
+  
+              <div class="form-label-group my-2 " >
+                  <label for="">Commentry</label>
+                  <div>
+                  <textarea   class="col-md-8 mx-auto"  #commentry></textarea> 
+                    </div>
+                  
+                </div>
+              <button class="btn btn-lg btn-primary btn-block text-uppercase  col-md-8 mx-auto" type="button" (click)="onAddScoreClick()" >Add Score</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+<router-outlet></router-outlet>
